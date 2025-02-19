@@ -1,6 +1,7 @@
-package com.nimrnd.picpaydesafiobackend.infra.database.entidades.usuario;
+package com.nimrnd.picpaydesafiobackend.infra.mappers;
 
 import com.nimrnd.picpaydesafiobackend.dominio.usuario.Usuario;
+import com.nimrnd.picpaydesafiobackend.infra.database.entidades.UsuarioORM;
 
 public final class UsuarioInfraMapper {
 
@@ -15,6 +16,7 @@ public final class UsuarioInfraMapper {
         .cpf(entity.getCpf())
         .email(entity.getEmail())
         .senha(entity.getSenha())
+        .carteira(entity.getCarteira())
         .tipoUsuario(entity.getTipoUsuario())
         .build();
   }
@@ -30,6 +32,7 @@ public final class UsuarioInfraMapper {
         .cpf(domain.getCpf())
         .email(domain.getEmail())
         .senha(domain.getSenha())
+        .carteira(domain.getCarteira())
         .tipoUsuario(domain.getTipoUsuario())
         .build();
   }

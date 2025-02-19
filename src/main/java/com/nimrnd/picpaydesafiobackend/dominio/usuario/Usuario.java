@@ -2,6 +2,8 @@ package com.nimrnd.picpaydesafiobackend.dominio.usuario;
 
 import lombok.*;
 
+import java.math.BigDecimal;
+
 @Getter
 @Setter
 @Builder
@@ -13,5 +15,6 @@ public class Usuario {
   private String cpf;
   private String email;
   private String senha;
+  private BigDecimal carteira;
   private TipoUsuario tipoUsuario;
 }

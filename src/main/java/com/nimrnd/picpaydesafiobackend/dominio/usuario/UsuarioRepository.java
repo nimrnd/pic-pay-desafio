@@ -6,6 +6,6 @@ import java.util.Optional;
 
 public interface UsuarioRepository {
   void salvar(Usuario usuario);
-  boolean emailExiste(String email);
-  boolean cpfExiste(String cpf);
+  Optional<Usuario> encontrarPorCpf(String cpf);
+  Optional<Usuario> encontrarPorId(Long id);
 }

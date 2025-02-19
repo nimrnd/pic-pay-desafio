@@ -16,6 +16,7 @@ public class UsuarioApplicationMapper {
         .cpf(usuario.getCpf())
         .email(usuario.getEmail())
         .senha(usuario.getSenha())
+        .carteira(usuario.getCarteira())
         .tipoUsuario(usuario.getTipoUsuario())
         .build();
   }
@@ -31,6 +32,7 @@ public class UsuarioApplicationMapper {
         .cpf(usuarioDTO.nomeCompleto())
         .email(usuarioDTO.email())
         .senha(usuarioDTO.senha())
+        .carteira(usuarioDTO.carteira())
         .tipoUsuario(usuarioDTO.tipoUsuario())
         .build();
   }
