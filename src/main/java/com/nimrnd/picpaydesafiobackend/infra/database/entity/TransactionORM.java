@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "transaction")
+@Table(name = "transactions")
 @Getter
 @Setter
 @Builder
@@ -29,7 +29,7 @@ public class TransactionORM {
 
   @ManyToOne
   @JoinColumn(name = "payee_id")
-  private User payee;
+  private UserORM payee;
 
   @Column(name = "timestamp")
   private LocalDateTime timestamp;

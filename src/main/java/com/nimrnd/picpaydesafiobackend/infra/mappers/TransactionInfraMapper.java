@@ -3,9 +3,9 @@ package com.nimrnd.picpaydesafiobackend.infra.mappers;
 import com.nimrnd.picpaydesafiobackend.domain.transaction.Transaction;
 import com.nimrnd.picpaydesafiobackend.infra.database.entity.TransactionORM;
 
-public class TransactionInfraMapper {
+public final class TransactionInfraMapper {
 
-  public TransactionORM toEntity(Transaction domain) {
+  public static TransactionORM toEntity(Transaction domain) {
     if (domain == null) {
       return null;
     }
@@ -19,7 +19,7 @@ public class TransactionInfraMapper {
         .build();
   }
 
-  public Transaction toDomain(TransactionORM entity) {
+  public static Transaction toDomain(TransactionORM entity) {
     if (entity == null) {
       return null;
     }

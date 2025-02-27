@@ -1,4 +1,4 @@
-package com.nimrnd.picpaydesafiobackend.infra.database.repositorios;
+package com.nimrnd.picpaydesafiobackend.infra.database.repository;
 
 import com.nimrnd.picpaydesafiobackend.domain.user.User;
 import com.nimrnd.picpaydesafiobackend.domain.user.UserRepository;
@@ -10,5 +10,4 @@ import java.util.Optional;
 @Repository
 public interface UserJpaRepository extends JpaRepository<User, Long>, UserRepository {
 
-  Optional<User> encontrarPorCpf(String cpf);
 }
