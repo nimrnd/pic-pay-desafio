@@ -1,6 +1,5 @@
 package com.nimrnd.picpaydesafiobackend.application.dto;
 
-import com.nimrnd.picpaydesafiobackend.domain.user.User;
 import lombok.Builder;
 
 import java.math.BigDecimal;
