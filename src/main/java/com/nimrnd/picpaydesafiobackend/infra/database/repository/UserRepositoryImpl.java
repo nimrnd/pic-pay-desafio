@@ -1,6 +1,7 @@
 package com.nimrnd.picpaydesafiobackend.infra.database.repository;
 
 import com.nimrnd.picpaydesafiobackend.domain.user.User;
+import com.nimrnd.picpaydesafiobackend.domain.user.UserRepository;
 import com.nimrnd.picpaydesafiobackend.infra.mappers.UserInfraMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
@@ -9,7 +10,7 @@ import java.util.Optional;
 
 @Repository
 @RequiredArgsConstructor
-public class UserRepositoryImpl {
+public class UserRepositoryImpl implements UserRepository {
 
   private final UserJpaRepository userJpaRepository;
 
