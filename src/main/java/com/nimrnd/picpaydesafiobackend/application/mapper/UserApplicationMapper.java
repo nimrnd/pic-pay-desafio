@@ -3,9 +3,9 @@ package com.nimrnd.picpaydesafiobackend.application.mapper;
 import com.nimrnd.picpaydesafiobackend.application.dto.UserDTO;
 import com.nimrnd.picpaydesafiobackend.domain.user.User;
 
-public class UserApplicationMapper {
+public final class UserApplicationMapper {
 
-  public UserDTO toDTO(User user) {
+  public static UserDTO toDTO(User user) {
     if (user == null) {
       return null;
     }
@@ -21,7 +21,7 @@ public class UserApplicationMapper {
         .build();
   }
 
-  public User toDomain(UserDTO userDTO) {
+  public static User toDomain(UserDTO userDTO) {
     if (userDTO == null) {
       return null;
     }

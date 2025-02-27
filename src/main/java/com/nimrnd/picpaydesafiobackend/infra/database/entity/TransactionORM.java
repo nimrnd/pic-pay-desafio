@@ -25,7 +25,7 @@ public class TransactionORM {
 
   @ManyToOne
   @JoinColumn(name = "payer_id")
-  private User payer;
+  private UserORM payer;
 
   @ManyToOne
   @JoinColumn(name = "payee_id")

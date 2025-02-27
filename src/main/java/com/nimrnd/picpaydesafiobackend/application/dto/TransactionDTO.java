@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 public record TransactionDTO(
     Long id,
     BigDecimal value,
-    User payer,
-    User payee,
+    UserDTO payer,
+    UserDTO payee,
     LocalDateTime timestamp
     ) {}
