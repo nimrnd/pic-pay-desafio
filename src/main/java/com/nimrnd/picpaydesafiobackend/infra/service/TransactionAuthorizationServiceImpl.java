@@ -17,7 +17,7 @@ public class TransactionAuthorizationServiceImpl implements TransactionAuthoriza
 
   private final RestTemplate restTemplate;
 
-  public boolean isTransactionAuthorized(User payer, BigDecimal value) {
+  public boolean isTransactionAuthorized() {
     try {
       AuthorizationResponseDTO response = restTemplate.getForObject(AUTHORIZATION_URL, AuthorizationResponseDTO.class);
       return response != null && response.isAuthorized();

@@ -26,7 +26,7 @@ public class TransactionService {
 
     userService.validateTransaction(payer, transaction.getValue());
 
-    boolean isAuthorized = this.transactionAuthorizationService.isTransactionAuthorized(payer, transaction.getValue());
+    boolean isAuthorized = this.transactionAuthorizationService.isTransactionAuthorized();
 
     if (!isAuthorized) {
       throw new Exception("Transaction not allowed");
