@@ -2,7 +2,6 @@ package com.nimrnd.picpaydesafiobackend.infra.service;
 
 import com.nimrnd.picpaydesafiobackend.application.dto.AuthorizationResponseDTO;
 import com.nimrnd.picpaydesafiobackend.application.service.TransactionAuthorizationService;
-import com.nimrnd.picpaydesafiobackend.domain.user.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
