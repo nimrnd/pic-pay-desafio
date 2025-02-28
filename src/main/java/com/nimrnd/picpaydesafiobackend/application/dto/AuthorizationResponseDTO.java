@@ -14,6 +14,6 @@ public class AuthorizationResponseDTO {
   }
 
   public boolean isAuthorized() {
-    return "sucess".equals(status) && data != null && data.authorization;
+    return "success".equals(status) && data != null && data.authorization;
   }
 }
