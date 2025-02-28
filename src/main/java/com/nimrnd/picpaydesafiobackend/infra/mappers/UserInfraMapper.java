@@ -21,7 +21,7 @@ public final class UserInfraMapper {
         .build();
   }
 
-  public static UserORM toORM(User domain){
+  public static UserORM toEntity(User domain){
     if (domain == null) {
       return null;
     }

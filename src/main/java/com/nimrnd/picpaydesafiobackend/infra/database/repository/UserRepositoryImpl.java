@@ -15,7 +15,7 @@ public class UserRepositoryImpl implements UserRepository {
   private final UserJpaRepository userJpaRepository;
 
   public void save(User user) {
-    userJpaRepository.save(UserInfraMapper.toORM(user));
+    userJpaRepository.save(UserInfraMapper.toEntity(user));
   }
 
   public Optional<User> findById(Long id) {
