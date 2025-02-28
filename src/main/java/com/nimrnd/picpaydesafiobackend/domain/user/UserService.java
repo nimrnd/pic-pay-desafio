@@ -1,16 +1,17 @@
 package com.nimrnd.picpaydesafiobackend.domain.user;
 
-import com.nimrnd.picpaydesafiobackend.infra.database.repository.UserRepositoryImpl;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.nimrnd.picpaydesafiobackend.application.service.TransactionAuthorizationService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 
 @Service
+@RequiredArgsConstructor
 public class UserService {
 
-  @Autowired
-  private UserRepositoryImpl userRepository;
+  private final UserRepository userRepository;
+  private final TransactionAuthorizationService transactionAuthorizationService;
 
   public void validateTransaction(User payer, BigDecimal value) throws Exception {
     if (payer.getUserType() == UserType.MERCHANT) {
@@ -22,7 +23,7 @@ public class UserService {
     }
   }
 
-  public User findById(Long id) throws Exception{
+  public User findById(Long id) throws Exception {
     return this.userRepository.findById(id).orElseThrow(() -> new Exception("User not found"));
   }
 

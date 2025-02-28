@@ -13,8 +13,8 @@ public final class TransactionInfraMapper {
     return TransactionORM.builder()
         .id(domain.getId())
         .value(domain.getValue())
-        .payer(UserInfraMapper.toORM(domain.getPayer()))
-        .payee(UserInfraMapper.toORM(domain.getPayee()))
+        .payer(UserInfraMapper.toEntity(domain.getPayer()))
+        .payee(UserInfraMapper.toEntity(domain.getPayee()))
         .timestamp(domain.getTimestamp())
         .build();
   }
